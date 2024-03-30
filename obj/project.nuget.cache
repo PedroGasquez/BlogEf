@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "bd9TiJajk33MsfOw9CWgkP/1QTUIQ8EAByFKiikQTrc2+3TCdrN3CH208VPOwNOB9Rf0tcyR+boxA29PP0iSpA==",
+  "dgSpecHash": "LITEvS13hVg22QQkicvFft56q4ml3ean70N9m9JKc1iznqdnQ2f3wTFU7xM6bQc0FYEkFcho/ez6hwGwxD9qDw==",
   "success": true,
   "projectFilePath": "C:\\Users\\phlga\\OneDrive\\Documentos\\dev\\Blog\\Blog.csproj",
   "expectedPackageFiles": [
@@ -62,6 +62,7 @@
     "C:\\Users\\phlga\\.nuget\\packages\\microsoft.win32.registry\\4.5.0\\microsoft.win32.registry.4.5.0.nupkg.sha512",
     "C:\\Users\\phlga\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
     "C:\\Users\\phlga\\.nuget\\packages\\mono.texttemplating\\2.2.1\\mono.texttemplating.2.2.1.nupkg.sha512",
+    "C:\\Users\\phlga\\.nuget\\packages\\secureidentity\\1.0.4\\secureidentity.1.0.4.nupkg.sha512",
     "C:\\Users\\phlga\\.nuget\\packages\\system.buffers\\4.5.0\\system.buffers.4.5.0.nupkg.sha512",
     "C:\\Users\\phlga\\.nuget\\packages\\system.codedom\\4.4.0\\system.codedom.4.4.0.nupkg.sha512",
     "C:\\Users\\phlga\\.nuget\\packages\\system.collections.immutable\\6.0.0\\system.collections.immutable.6.0.0.nupkg.sha512",

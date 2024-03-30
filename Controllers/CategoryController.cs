@@ -14,6 +14,7 @@ namespace Blog.Controllers
         public async Task<IActionResult> GetAsync( // async possivel usar de modo paralelo sem precisar esperar
             [FromServices] BlogDataContext context)
         {
+            
             try
             {
                 var categories = await context.Categories.ToListAsync();

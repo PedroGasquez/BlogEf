@@ -129,3 +129,6 @@ C:\Users\phlga\OneDrive\Documentos\dev\Blog\obj\Debug\net8.0\refint\Blog.dll
 C:\Users\phlga\OneDrive\Documentos\dev\Blog\obj\Debug\net8.0\Blog.pdb
 C:\Users\phlga\OneDrive\Documentos\dev\Blog\obj\Debug\net8.0\Blog.genruntimeconfig.cache
 C:\Users\phlga\OneDrive\Documentos\dev\Blog\obj\Debug\net8.0\ref\Blog.dll
+C:\Users\phlga\OneDrive\Documentos\dev\Blog\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\phlga\OneDrive\Documentos\dev\Blog\obj\Debug\net8.0\Blog.sourcelink.json
+C:\Users\phlga\OneDrive\Documentos\dev\Blog\bin\Debug\net8.0\SecureIdentity.dll
