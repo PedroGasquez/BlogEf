@@ -35,6 +35,12 @@ Este contexto de dados utiliza o Entity Framework Core para se conectar ao banco
 
 Este serviço é responsável por gerar tokens de autenticação JWT (JSON Web Tokens) para os usuários.
 
+## Tecnologias Utilizadas
+
+- ASP.NET Core
+- Entity Framework Core
+- JWT (JSON Web Tokens)
+
 ## Como Executar
 
 1. Clone este repositório.
@@ -48,4 +54,3 @@ Contribuições são bem-vindas! Sinta-se à vontade para abrir problemas ou env
 
 ## Licença
 
-Este projeto é licenciado sob a [MIT License](https://opensource.org/licenses/MIT).
