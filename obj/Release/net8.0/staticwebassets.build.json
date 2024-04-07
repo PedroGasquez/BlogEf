@@ -1,0 +1,39 @@
+{
+  "Version": 1,
+  "Hash": "DOzEIbv5rVB37IOATZojRz4yQIJNw3nAn9ybXXYQlMU=",
+  "Source": "Blog",
+  "BasePath": "_content/Blog",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "Blog\\wwwroot",
+      "Source": "Blog",
+      "ContentRoot": "C:\\Users\\phlga\\OneDrive\\Documentos\\dev\\Blog\\wwwroot\\",
+      "BasePath": "_content/Blog",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\phlga\\OneDrive\\Documentos\\dev\\Blog\\wwwroot\\images\\c8b3c4ae-f272-4271-833b-414746bf728e.jpg",
+      "SourceId": "Blog",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\phlga\\OneDrive\\Documentos\\dev\\Blog\\wwwroot\\",
+      "BasePath": "_content/Blog",
+      "RelativePath": "images/c8b3c4ae-f272-4271-833b-414746bf728e.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\c8b3c4ae-f272-4271-833b-414746bf728e.jpg"
+    }
+  ]
+}
