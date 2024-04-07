@@ -2,6 +2,8 @@
 using Blog.Extension;
 using Blog.Models;
 using Blog.ViewModels;
+using Blog.ViewModels.Accounts;
+using Blog.ViewModels.Categories;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 

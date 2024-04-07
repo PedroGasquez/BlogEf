@@ -8,6 +8,7 @@ C:\Users\phlga\OneDrive\Documentos\dev\Blog\bin\Debug\net8.0\Blog.pdb
 C:\Users\phlga\OneDrive\Documentos\dev\Blog\bin\Debug\net8.0\Azure.Core.dll
 C:\Users\phlga\OneDrive\Documentos\dev\Blog\bin\Debug\net8.0\Azure.Identity.dll
 C:\Users\phlga\OneDrive\Documentos\dev\Blog\bin\Debug\net8.0\Humanizer.dll
+C:\Users\phlga\OneDrive\Documentos\dev\Blog\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\phlga\OneDrive\Documentos\dev\Blog\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\phlga\OneDrive\Documentos\dev\Blog\bin\Debug\net8.0\Microsoft.CodeAnalysis.dll
 C:\Users\phlga\OneDrive\Documentos\dev\Blog\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.dll
@@ -31,6 +32,7 @@ C:\Users\phlga\OneDrive\Documentos\dev\Blog\bin\Debug\net8.0\Microsoft.IdentityM
 C:\Users\phlga\OneDrive\Documentos\dev\Blog\bin\Debug\net8.0\Microsoft.SqlServer.Server.dll
 C:\Users\phlga\OneDrive\Documentos\dev\Blog\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
 C:\Users\phlga\OneDrive\Documentos\dev\Blog\bin\Debug\net8.0\Mono.TextTemplating.dll
+C:\Users\phlga\OneDrive\Documentos\dev\Blog\bin\Debug\net8.0\SecureIdentity.dll
 C:\Users\phlga\OneDrive\Documentos\dev\Blog\bin\Debug\net8.0\System.CodeDom.dll
 C:\Users\phlga\OneDrive\Documentos\dev\Blog\bin\Debug\net8.0\System.Composition.AttributedModel.dll
 C:\Users\phlga\OneDrive\Documentos\dev\Blog\bin\Debug\net8.0\System.Composition.Convention.dll
@@ -115,6 +117,7 @@ C:\Users\phlga\OneDrive\Documentos\dev\Blog\obj\Debug\net8.0\Blog.AssemblyInfoIn
 C:\Users\phlga\OneDrive\Documentos\dev\Blog\obj\Debug\net8.0\Blog.AssemblyInfo.cs
 C:\Users\phlga\OneDrive\Documentos\dev\Blog\obj\Debug\net8.0\Blog.csproj.CoreCompileInputs.cache
 C:\Users\phlga\OneDrive\Documentos\dev\Blog\obj\Debug\net8.0\Blog.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\phlga\OneDrive\Documentos\dev\Blog\obj\Debug\net8.0\Blog.sourcelink.json
 C:\Users\phlga\OneDrive\Documentos\dev\Blog\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\phlga\OneDrive\Documentos\dev\Blog\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\phlga\OneDrive\Documentos\dev\Blog\obj\Debug\net8.0\staticwebassets\msbuild.Blog.Microsoft.AspNetCore.StaticWebAssets.props
@@ -129,6 +132,4 @@ C:\Users\phlga\OneDrive\Documentos\dev\Blog\obj\Debug\net8.0\refint\Blog.dll
 C:\Users\phlga\OneDrive\Documentos\dev\Blog\obj\Debug\net8.0\Blog.pdb
 C:\Users\phlga\OneDrive\Documentos\dev\Blog\obj\Debug\net8.0\Blog.genruntimeconfig.cache
 C:\Users\phlga\OneDrive\Documentos\dev\Blog\obj\Debug\net8.0\ref\Blog.dll
-C:\Users\phlga\OneDrive\Documentos\dev\Blog\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
-C:\Users\phlga\OneDrive\Documentos\dev\Blog\obj\Debug\net8.0\Blog.sourcelink.json
-C:\Users\phlga\OneDrive\Documentos\dev\Blog\bin\Debug\net8.0\SecureIdentity.dll
+C:\Users\phlga\OneDrive\Documentos\dev\Blog\bin\Debug\net8.0\Blog.staticwebassets.runtime.json

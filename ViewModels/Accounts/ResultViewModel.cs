@@ -1,4 +1,4 @@
-﻿namespace Blog.ViewModels
+﻿namespace Blog.ViewModels.Accounts
 {
     //Padronizacao de erros
     public class ResultViewModel<T>
