@@ -6,6 +6,7 @@ using Blog.ViewModels.Accounts;
 using Blog.ViewModels.Categories;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Caching.Memory;
 
 namespace Blog.Controllers
 {
@@ -14,19 +15,28 @@ namespace Blog.Controllers
     {
         [HttpGet("v1/categories")] // Sempre em minusculo e no plural Versionamento
         public async Task<IActionResult> GetAsync( // async possivel usar de modo paralelo sem precisar esperar
-            [FromServices] BlogDataContext context)
+            [FromServices] BlogDataContext context,
+            [FromServices] IMemoryCache cache)
         {
-            
+            //Cache de uma aplicacao e muito importante usar como base para criar outra aplicacao
             try
             {
-                var categories = await context.Categories.ToListAsync();
+                var categories = cache.GetOrCreate("CategoriesCache", entry =>
+                {
+                    entry.AbsoluteExpirationRelativeToNow = TimeSpan.FromHours(1);
+                    return GetCategories(context);
+                });
                 return Ok(new ResultViewModel<List<Category>>(categories));
             }
             catch
             {
                 return StatusCode(500, new ResultViewModel<List<Category>>("05X04 - Falha interna no servidor"));
             }
-            
+        }
+
+        private List<Category> GetCategories(BlogDataContext context)
+        {
+            return context.Categories.ToList();
         }
 
         [HttpGet("v1/categories/{id:int}")] // nao esquecer de colocar a barra
@@ -44,21 +54,20 @@ namespace Blog.Controllers
 
                 return NotFound(new ResultViewModel<Category>(category));
             }
-            catch 
+            catch
             {
                 return StatusCode(500, new ResultViewModel<Category>("Erro no servidor"));
             }
-          
         }
 
-        [HttpPost("v1/categories")] 
+        [HttpPost("v1/categories")]
         public async Task<IActionResult> PostAsync(
             [FromBody] EditorCategoryViewModel model,
             [FromServices] BlogDataContext context)
-        {      
-            if(!ModelState.IsValid)
+        {
+            if (!ModelState.IsValid)
                 return BadRequest(new ResultViewModel<Category>(ModelState.GetErrors()));
-            
+
             try
             {
                 var category = new Category
@@ -66,22 +75,20 @@ namespace Blog.Controllers
                     Id = 0,
                     Name = model.Name,
                     Slug = model.Slug.ToLower(),
-
                 };
                 await context.Categories.AddAsync(category);
                 await context.SaveChangesAsync();
 
                 return Created($"v1/categories/{category.Id}", new ResultViewModel<Category>(category));
             }
-            catch(DbUpdateException)
+            catch (DbUpdateException)
             {
-                return StatusCode(500,new ResultViewModel<Category>("XE9 - Nao foi possivel incluir a categoria"));
+                return StatusCode(500, new ResultViewModel<Category>("XE9 - Nao foi possivel incluir a categoria"));
             }
             catch (Exception)
             {
                 return StatusCode(500, new ResultViewModel<Category>("XE90 - Nao foi possivel incluir a categoria"));
             }
-            
         }
 
         [HttpPut("v1/categories/{id:int}")]
@@ -115,7 +122,6 @@ namespace Blog.Controllers
             {
                 return StatusCode(500, new ResultViewModel<Category>("05C30 - Falha interna no servidor"));
             }
-           
         }
 
         [HttpDelete("v1/categories/{id:int}")]
@@ -144,10 +150,7 @@ namespace Blog.Controllers
             catch (Exception)
             {
                 return StatusCode(500, new ResultViewModel<Category>("05C29 - Nao foi possivel deletar a categoria"));
-
             }
-
         }
-
     }
 }

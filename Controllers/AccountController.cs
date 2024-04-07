@@ -12,15 +12,15 @@ using SecureIdentity.Password;
 
 namespace Blog.Controllers
 {
-    
+
     [ApiController]
     public class AccountController : ControllerBase
     {
         [HttpPost("v1/accounts")]
         public async Task<IActionResult> Post(
-            [FromBody]RegisterViewModel model,
+            [FromBody] RegisterViewModel model,
             [FromServices] EmailService emailService,
-            [FromServices]BlogDataContext context)
+            [FromServices] BlogDataContext context)
         {
             if (!ModelState.IsValid)
                 return BadRequest(new ResultViewModel<string>(ModelState.GetErrors()));
@@ -39,14 +39,14 @@ namespace Blog.Controllers
                 await context.Users.AddAsync(user);
                 await context.SaveChangesAsync();
 
-                emailService.Send(user.Name, 
-                    user.Email, 
-                    "Bem vindo ao blog!", 
+                emailService.Send(user.Name,
+                    user.Email,
+                    "Bem vindo ao blog!",
                     $"Sua senha é {password}");
 
                 return Ok(new ResultViewModel<dynamic>(new
                 {
-                    user = user.Email, 
+                    user = user.Email,
                     password
                 }));
             }
@@ -54,7 +54,7 @@ namespace Blog.Controllers
             {
                 return StatusCode(400, new ResultViewModel<string>("05X99 - Este E-mail ja foi cadastrado"));
             }
-            catch 
+            catch
             {
                 return StatusCode(500, new ResultViewModel<string>("05X83 - Falha interna do servidor"));
             }
@@ -77,7 +77,7 @@ namespace Blog.Controllers
 
             if (user == null)
                 return StatusCode(401, new ResultViewModel<string>("Usuario ou senha invalida"));
-           
+
             // Password.Hash() => gera um novo hash
             if (!PasswordHasher.Verify(user.PasswordHash, model.Password))
                 return StatusCode(401, new ResultViewModel<string>("Usuario ou senha invalidos"));
@@ -94,17 +94,17 @@ namespace Blog.Controllers
             }
 
         }
-        
+
         [Authorize]
         [HttpPost("v1/accounts/upload-image")]
         public async Task<IActionResult> UploadImage(
-            [FromBody] UploadViewModel model,
+            [FromBody] UploadImageViewModel model,
             [FromServices] BlogDataContext context)
         {
             var fileName = $"{Guid.NewGuid().ToString()}.jpg";
             var data = new Regex(@"^data:image\/[a-z]+;base64,").Replace(model.Base64Image, "");
             var bytes = Convert.FromBase64String(data);
-            
+
             try
             {
                 await System.IO.File.WriteAllBytesAsync($"wwwroot/images/{fileName}", bytes);
@@ -113,14 +113,14 @@ namespace Blog.Controllers
             {
                 return StatusCode(500, new ResultViewModel<string>("05X04 - Falha interna no servidor"));
             }
-            
+
             var user = await context
                 .Users
                 .FirstOrDefaultAsync(x => x.Email == User.Identity.Name);
 
             if (user == null)
                 return NotFound(new ResultViewModel<Category>("Usuário não encontrado"));
-            
+
             user.Image = $"https://localhost:0000/images/{fileName}";
             try
             {
@@ -135,5 +135,4 @@ namespace Blog.Controllers
             return Ok(new ResultViewModel<string>("Imagem alterada com sucesso!", null));
         }
     }
-    
 }

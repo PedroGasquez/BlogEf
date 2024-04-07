@@ -1,3 +1,5 @@
+using System.Text.Json.Serialization;
+
 namespace Blog.Models
 {
     public class User
@@ -5,6 +7,7 @@ namespace Blog.Models
         public int Id { get; set; }
         public string Name { get; set; }
         public string Email { get; set; }
+        [JsonIgnore] //Oculta o que vai ser retornado do Json
         public string PasswordHash { get; set; }
         public string Image { get; set; }
         public string Slug { get; set; }
