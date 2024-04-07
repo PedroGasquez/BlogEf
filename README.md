@@ -11,6 +11,9 @@ Este projeto consiste em uma API para gerenciar um blog, incluindo categorias, c
 
 ## Endpoints
 
+## Abra a api nessa http http://localhost:5118/swagger/
+- Para ter a documentacao completa pelo swagger
+
 Os endpoints são detalhados nos respectivos controladores.
 
 ## Classes
